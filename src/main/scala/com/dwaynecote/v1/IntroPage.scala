@@ -5,6 +5,7 @@ import org.odfi.wsb.fwapp.lib.security.views.SecurityView
 import org.odfi.wsb.fwapp.lib.markdown.MarkdownView
 import org.odfi.wsb.fwapp.framework.FWAppValueBufferView
 import com.dwaynecote.DwayneCote
+import scala.util.Random
 
 class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView {
 
@@ -60,7 +61,9 @@ class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView
 
               }
 
-              "pic" :: image(createAssetsResolverURI("/dc/dc/pictures/dwayne/fb-cover.jpg")) {
+              val selection = List("fb-cover.jpg","fb-mills.jpg","fb-triciaspencer.jpg")
+              val selected = selection(Random.nextInt(3))
+              "pic ui circular image" :: image(createAssetsResolverURI(s"/dc/dc/pictures/dwayne/$selected")) {
 
               }
             }

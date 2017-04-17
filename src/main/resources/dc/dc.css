@@ -48,7 +48,8 @@ h3 {
 	overflow: visible;*/
 }
 .header .pic {
-	width: 35%;
+	/*width: 35%;*/
+	height: 300px;
 	position: absolute;
 	top:5px;
 	right: 5px;
