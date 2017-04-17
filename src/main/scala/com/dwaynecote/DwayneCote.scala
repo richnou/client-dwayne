@@ -12,14 +12,23 @@ import com.dwaynecote.account.AccountView
 import org.odfi.wsb.fwapp.lib.security.provider.google.GoogleAPIModule
 import com.dwaynecote.v1.IntroPage
 import org.odfi.wsb.fwapp.Site
+import org.odfi.indesign.ide.module.maven.project
 
 object DwayneCote extends DefaultSiteApp("/site") {
 
   //tlogEnableFull[Site]
   
   //-- Port 
-  val pro = project()
-  this.listen(sys.env.getOrElse("port", "8585").toInt)
+  val pro = project("com.idyria.web","dwaynecote")
+  pro.get.isSnapshot match {
+    case true => 
+      
+       this.listen(sys.env.getOrElse("port", "8586").toInt)
+       
+    case false => 
+       this.listen(sys.env.getOrElse("port", "8585").toInt)
+  }
+ 
 
   //-- Assets
   //var assets = this.useDefaultAssets
