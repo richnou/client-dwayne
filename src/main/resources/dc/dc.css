@@ -1,0 +1,66 @@
+body {
+	margin: 20px;
+	
+}
+
+.container.grid {
+	
+	border-left: 2px black solid;
+}
+
+.main.title {
+	font-family: miama, cursive;
+	font-size: 36pt;
+}
+
+.second.title {
+	font-family: miama, cursive;
+	font-size: 24pt;
+	position: relative;
+	left: 125px;
+	top: -20px;
+}
+
+h3 {
+	font-family: miama, cursive;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.block {
+	display: block;
+}
+
+/** header **/
+.header {
+	position: relative;
+	/*background-image: url("pictures/dwayne/fb-cover.jpg");
+	background-position: right;
+	background-size: 40%; 
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-attachment: scroll;
+	overflow: visible;*/
+}
+.header .pic {
+	width: 35%;
+	position: absolute;
+	top:5px;
+	right: 5px;
+	
+}
+
+/** Listen **/
+.listen {
+	position:relative;
+	top: 170px;
+	padding: 10px;
+	background-color: lightgoldenrodyellow;
+}
+
+
+/** Table **/
+table .spanline {
+	text-align: center;
+	background-color: lightgoldenrodyellow;
+}

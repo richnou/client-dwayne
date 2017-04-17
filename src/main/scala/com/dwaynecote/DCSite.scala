@@ -16,7 +16,7 @@ object DCSite extends Site("/site") {
   
   //-- Assets
   var assets = this.useDefaultAssets
-  assets.addDefaultResourcesAssetSource(basePath)
+  assets.addDefaultResourcesAssetSource("/dc")
   assets.addResourcesAssetSource("/semantic").addFilesSource("semantic-custom")
   
   // Google
