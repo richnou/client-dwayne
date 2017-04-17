@@ -1,6 +1,6 @@
 body {
 	margin: 20px;
-	
+	font-family: 'Open Sans', sans-serif;
 }
 
 .container.grid {
@@ -22,8 +22,10 @@ body {
 }
 
 h3 {
-	font-family: miama, cursive;
-	font-size: 20pt;
+	
+	/*font-family: miama, cursive;*/
+	font-family: 'Clicker Script', cursive;
+	font-size: 26pt;
 	font-weight: bold;
 }
 

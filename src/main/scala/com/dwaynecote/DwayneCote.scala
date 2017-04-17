@@ -24,6 +24,7 @@ object DwayneCote extends DefaultSiteApp("/site") {
     case true => 
       
        this.listen(sys.env.getOrElse("port", "8586").toInt)
+       this.basePath = "/review"
        
     case false => 
        this.listen(sys.env.getOrElse("port", "8585").toInt)

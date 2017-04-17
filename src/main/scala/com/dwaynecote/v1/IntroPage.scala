@@ -18,6 +18,7 @@ class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView
 
         }
         importHTML(<script src="//use.edgefonts.net/miama:n4.js"></script>)
+        importHTML(<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Open+Sans" rel="stylesheet"/>)
       }
       body {
 
