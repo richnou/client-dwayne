@@ -59,9 +59,9 @@ class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView
               "second title" :: h1("A Cape Breton Fiddler") {
 
               }
-              
+
               "pic" :: image(createAssetsResolverURI("/dc/dc/pictures/dwayne/fb-cover.jpg")) {
-                
+
               }
             }
 
@@ -97,20 +97,23 @@ class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView
                           |You can listen to this set, taken of the Album The Empress, which Dwayne recorded with
                           |Newfoundland's Guitarist Dwayne Andrews.  """.stripMargin)
                   div {
-                    audio {
-                      id("audio-demo")
-                      +@("controls" -> "")
-                      +@("volume" -> 0.2)
+                    "inline" :: div {
+                      audio {
+                        id("audio-demo")
+                        +@("controls" -> "")
+                        +@("volume" -> 0.2)
 
-                      source {
-                        +@("src" -> createAssetsResolverURI("/dc/dc/audio/iona.ogg"))
-                        +@("type" -> "audio/ogg")
-                      }
-                      source {
-                        +@("src" -> createAssetsResolverURI("/dc/dc/audio/iona.mp3"))
-                        +@("type" -> "audio/mp3")
+                        source {
+                          +@("src" -> createAssetsResolverURI("/dc/dc/audio/iona.ogg"))
+                          +@("type" -> "audio/ogg")
+                        }
+                        source {
+                          +@("src" -> createAssetsResolverURI("/dc/dc/audio/iona.mp3"))
+                          +@("type" -> "audio/mp3")
+                        }
                       }
                     }
+                    
                   }
                   div {
                     "block" :: a("#") {
@@ -126,6 +129,7 @@ class IntroPage extends SemanticView with MarkdownView with FWAppValueBufferView
                       +@("onclick" -> """document.getElementById("audio-demo").currentTime=120+48;return false;""")
                     }
                   }
+                  "cc-license" :: div(importHTML(<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"/></a>))
                 }
               }
             }
